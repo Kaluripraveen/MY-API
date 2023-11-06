@@ -1,0 +1,517 @@
+{
+	"info": {
+		"_postman_id": "0c25ef9a-33b9-485e-92d5-538d702ba380",
+		"name": "MY API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23158580"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"string\",\n  \"email\": \"string234@gmail.com\",\n  \"full_name\": \"string\",\n  \"password\": \"stringss\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"string\",\n  \"email\": \"string234@gmail.com\",\n  \"full_name\": \"string\",\n  \"password\": \"stringss\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 05 Nov 2023 21:39:43 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "42"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User registered successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"string234@gmail.com\",\n  \"password\": \"stringss\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"string234@gmail.com\",\n  \"password\": \"stringss\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 05 Nov 2023 21:44:24 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "951"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"custom_token\": \"eyJhbGciOiAiUlMyNTYiLCAidHlwIjogIkpXVCIsICJraWQiOiAiOTdmNmQ1YWU1NjQyNmMyZDU1OTZiMTQzZmI5ODJhMDg5Y2JkMzQ5ZiJ9.eyJpc3MiOiAiZmlyZWJhc2UtYWRtaW5zZGstc3UwcTRAYmFja2VuZGF1dGgtYzBhOWYuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCAic3ViIjogImZpcmViYXNlLWFkbWluc2RrLXN1MHE0QGJhY2tlbmRhdXRoLWMwYTlmLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwgImF1ZCI6ICJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsICJ1aWQiOiAiZjFEZGF3cVlmYVFESjhBaVVwbURQZVk1TEMxMiIsICJpYXQiOiAxNjk5MjIwNjY2LCAiZXhwIjogMTY5OTIyNDI2NiwgImNsYWltcyI6IHsiaXNfYWRtaW4iOiBmYWxzZX19.BH7B2TuW9WnpPf-JIXs9e4VHiqv8UXsC3RHE8vONNYxeXFIgdXOtW-6bz3M--L3TVRDjzzHIYBHgFtYI6HTnsxE_4j0-R8D00IYdaIQA-o-joRaPm826AnvymEaLwGricRdsceVL8RUtiqGx09KFIg-olRgk1um45Yok2szz_f4kp0wBx6Xao3Eig0tgTtr6JMKlF-JKMi1wkPkP1XvjsDZTfvovQo3EkpTTGf6IBentEFraIa9IIhJKbsc58h7sB9epvG1Px6zZ6uipcNUnQYh_ztsbD2OwSz0HaPkMS_mTAqCjG7AnuXygawsi9YtfSgBAeQvwJcVb6B-RQ9Ofrg\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get_user_profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "email",
+						"value": "string234@gmail.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/string234@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"string234@gmail.com"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get_user_profile",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "string234@gmail.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"string234@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/user/string234@gmail.com",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"string234@gmail.com"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 05 Nov 2023 21:56:40 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "120"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"created_at\": \"2023-11-05T21:39:46.489000+00:00\",\n    \"full_name\": \"string\",\n    \"email\": \"string234@gmail.com\",\n    \"username\": \"string\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update_user_profile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"string k\",\n  \"full_name\": \"string josh\",\n  \"email\": \"string2345@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/string234@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"string234@gmail.com"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update_user_profile",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"string k\",\n  \"full_name\": \"string josh\",\n  \"email\": \"string2345@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/user/string234@gmail.com",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"string234@gmail.com"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 05 Nov 2023 21:59:26 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "47"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User profile updated successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete_user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/string234@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"string234@gmail.com"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete_user",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/user/string234@gmail.com",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"string234@gmail.com"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 05 Nov 2023 22:01:14 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "39"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User deleted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "reset_password",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/reset-password/{email,password}?email=tes%40example.com&new_password=11234test",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"reset-password",
+						"{email,password}"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "tes%40example.com"
+						},
+						{
+							"key": "new_password",
+							"value": "11234test"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "reset_password",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/reset-password/{email,password}?email=tes%40example.com&new_password=11234test",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"reset-password",
+								"{email,password}"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "tes%40example.com"
+								},
+								{
+									"key": "new_password",
+									"value": "11234test"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 05 Nov 2023 22:05:15 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "39"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Password reset successful\"\n}"
+				}
+			]
+		}
+	]
+}

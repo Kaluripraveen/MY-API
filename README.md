@@ -61,7 +61,7 @@ base64 library.
 - Description: Delete a user by email.
 - Parameters: `email`
 - 
-### `/reset-pasword` (PUT)
+### `/reset-pasword/{email,new_password}`` (PUT)
 - Description: Update user password.
 - Parameters: `email`.`new_password`
 

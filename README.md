@@ -1,21 +1,28 @@
 # MY-API
 ## Overview
 
-Briefly describe your project and its purpose.
+user management system backend using Firebase.The system will provide
+APIs to perform user registrations, user logins, and the ability to retrieve, update, and delete
+user profiles and also reset-password.file system is used in this project where user password is stored in 
+separate JSON file with respected email address.for security purpose password are encode and hashed using 
+base64 library.
 
 ## Prerequisites
 
-List any prerequisites that need to be installed or set up before using your API.
-
 - Python 3.x
 - FastAPI
+- uvicorn
 - Firebase Admin SDK
 - Redis (if used for rate limiting)
-- Other dependencies
+-  fastapi-limiter
+- bcrypt
+- base64
+- pytest
+- requests
+- httpx
+- pytest-asyncio(Unit testing)
 
 ## Installation
-
-Provide step-by-step instructions on how to install and set up your project.
 
 1. Clone this repository to your local machine.
 2. Install the required dependencies using pip:
@@ -24,12 +31,8 @@ Provide step-by-step instructions on how to install and set up your project.
 
 ## Usage
 
-Explain how to use your API, including:
-
 - Starting the FastAPI application.
 - Making API requests (e.g., using Postman or cURL).
-- Authentication requirements.
-- Common use cases and examples.
 
 ## API Endpoints
 
@@ -57,15 +60,18 @@ Explain how to use your API, including:
 
 - Description: Delete a user by email.
 - Parameters: `email`
-
-## Rate Limiting
-
-Explain any rate limiting mechanism used in your project and how it's configured.
+- 
+### `/user/{reset-pasword}` (PUT)
+- Description: Update user password.
+- Parameters: `email`.`new_password`
 
 ## Testing
 
-Provide instructions on how to run unit tests for your project.
+For Unit Testing 
+run command in your terminal pytest Test_main.py
+note:don't run command twice,if u want to run agian change user data in new_user_data funtion
 
 ## API Documentation
 
-If available, include a link to your Postman collection or equivalent API documentation.
+Postman Collections is provided in this respository:MY API.postman_collection.json
+import this file to your postman application.
